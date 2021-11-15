@@ -1,2 +1,10 @@
-= entry.city
-= entry.note
+.row.g-0.rounded-3.shadow.mb-5.vh-20
+  .col-md-3.h-100.overflow-hidden.rounded-start
+    = image_tag('/images/road.jpg', class: 'img-fluid img-cover py-0')
+  .col-md-9.p-3.h-100
+    .fw-bold.fs-3
+      = entry.city
+      = entry.temperature
+      &degC
+    .fs-5.h-75.overflow-hidden
+      = entry.note

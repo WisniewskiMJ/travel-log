@@ -12,4 +12,6 @@
   %body
     %p.notice= notice
     %p.alert= alert
-    = yield
+    = render 'shared/navbar'
+    .container
+      = yield

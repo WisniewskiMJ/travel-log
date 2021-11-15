@@ -1,0 +1,20 @@
+.navbar.navbar-light.fixed-top
+  .container-fluid
+    .d-flex.flex-row-reverse.w-100
+      .shadow
+        .navbar-toggler{"aria-controls" => "offcanvasNavbar", "data-bs-target" => "#offcanvasNavbar", "data-bs-toggle" => "offcanvas", :type => "button"}
+          .navbar-toggler-icon
+    #offcanvasNavbar.offcanvas.offcanvas-end{"aria-labelledby" => "offcanvasNavbarLabel", :tabindex => "-1"}
+      .offcanvas-header
+        #offcanvasNavbarLabel.offcanvas-title Offcanvas
+        .btn-close.text-reset{"aria-label" => "Close", "data-bs-dismiss" => "offcanvas", :type => "button"}
+      .offcanvas-body
+        .navbar-nav.justify-content-end.flex-grow-1.pe-3
+          .nav-item
+            = link_to 'Home', root_url, class: "btn btn-secondary"
+          .nav-item
+            .nav-link{:href => "#"} Link
+        %form.d-flex
+          %input.form-control.me-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
+          %button.btn.btn-outline-success{:type => "submit"} Search
+        = render 'shared/navbar_links'
