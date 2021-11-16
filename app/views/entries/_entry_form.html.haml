@@ -1,0 +1,10 @@
+.shadow.mb-5.p-3.rounded-3
+  .mb-2.fs-1
+    Add a new entry
+  = form_for(:entry, url: entries_path) do |f|
+    .form-group.mb-3
+      = f.text_field :city, placeholder: 'City', class: 'form-control'
+    .form-group.mb-3
+      = f.text_area :note, placeholder: 'Note', class: 'form-control input-field'
+    .form-group
+      = f.submit 'Add', class: 'btn btn-secondary'

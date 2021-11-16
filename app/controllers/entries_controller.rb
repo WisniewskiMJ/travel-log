@@ -5,16 +5,13 @@ before_action :authenticate_user!, except: [:index, :show]
     @entries = Entry.all
   end
 
-  def new
-    @entry = Entry.new
-  end
-
   def create
-    @entry = Entry.new(entry_params)
+    @entry = current_user.entries.build(entry_params)
+    @entry.temperature = 22
     if @entry.save
-      redirect_to @entry
+      redirect_to root_path
     else
-      render :new
+      redirect_to root_path
     end
   end
 
