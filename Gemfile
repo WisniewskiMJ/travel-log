@@ -32,6 +32,8 @@ gem 'devise-bootstrap-views', '~> 1.1'
 gem 'haml-rails', '~> 2.0', '>= 2.0.1'
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
 gem 'omniauth-google-oauth2', '~> 1.0'
+gem 'httparty', '~> 0.20.0'
+gem 'ascii', '~> 1.0', '>= 1.0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

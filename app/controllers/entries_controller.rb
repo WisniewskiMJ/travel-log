@@ -6,11 +6,12 @@ before_action :authenticate_user!, except: [:index, :show]
   end
 
   def create
-    @entry = current_user.entries.build(entry_params)
-    @entry.temperature = 22
-    if @entry.save
+    entry = EntryCreator.call(entry_params, current_user)
+    if entry.created?
+      flash[:notice] = 'New entry added'
       redirect_to root_path
     else
+      flash[:alert] = entry.payload.errors.full_messages
       redirect_to root_path
     end
   end
