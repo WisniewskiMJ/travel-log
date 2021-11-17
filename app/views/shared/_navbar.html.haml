@@ -6,15 +6,10 @@
           .navbar-toggler-icon
     #offcanvasNavbar.offcanvas.offcanvas-end{"aria-labelledby" => "offcanvasNavbarLabel", :tabindex => "-1"}
       .offcanvas-header
-        #offcanvasNavbarLabel.offcanvas-title Offcanvas
+        #offcanvasNavbarLabel.offcanvas-title.fs-2 Travel Log
         .btn-close.text-reset{"aria-label" => "Close", "data-bs-dismiss" => "offcanvas", :type => "button"}
       .offcanvas-body
-        .navbar-nav.justify-content-end.flex-grow-1.pe-3
+        .navbar-nav.justify-content-end.flex-grow-1.pe-3.mb-5
           .nav-item
-            = link_to 'Home', root_url, class: "btn btn-secondary"
-          .nav-item
-            .nav-link{:href => "#"} Link
-        %form.d-flex
-          %input.form-control.me-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
-          %button.btn.btn-outline-success{:type => "submit"} Search
-        = render 'shared/navbar_links'
+            = link_to 'Home', root_url, class: "nav-link"
+        = link_to 'Logout', destroy_user_session_url, method: :delete, class: "btn btn-secondary"

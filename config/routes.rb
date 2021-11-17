@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  root to: "entries#index"
+  root to: "pages#welcome"
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
-  resources :entries, except: [:index, :new]
-  get '/dashboard', to: 'pages#dashboard'
+  resources :entries, except: [:new]
 end
