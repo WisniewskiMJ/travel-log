@@ -3,7 +3,7 @@
     Add a new entry
   = form_for(:entry, url: entries_path) do |f|
     .form-group.mb-3
-      = f.text_field :city, placeholder: 'City', class: 'form-control'
+      = f.text_field :location, placeholder: 'Location', class: 'form-control'
     .form-group.mb-3
       = f.text_area :note, placeholder: 'Note', class: 'form-control input-field'
     .form-group

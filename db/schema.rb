@@ -10,18 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_15_123301) do
+ActiveRecord::Schema.define(version: 2021_11_17_134607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "entries", force: :cascade do |t|
-    t.string "city", null: false
+    t.string "location", null: false
     t.integer "temperature", null: false
     t.text "note", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude", null: false
+    t.float "longitude", null: false
     t.index ["user_id"], name: "index_entries_on_user_id"
   end
 

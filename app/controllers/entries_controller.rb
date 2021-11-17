@@ -42,7 +42,7 @@ before_action :authenticate_user!, except: [:index, :show]
   private
 
   def entry_params
-    params.require(:entry).permit(:city, :note)
+    params.require(:entry).permit(:location, :note)
   end
 end
   
