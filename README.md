@@ -42,6 +42,5 @@ and the app will be available at __localhost:3000__ in your browser.
 
 ### To do
 
-* Setup ActiveStorage
 * Add service for editing entries
 * Add end to end tests
