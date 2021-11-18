@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
-before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
     @entries = current_user.entries
@@ -8,12 +8,11 @@ before_action :authenticate_user!
   def create
     entry = EntryCreator.call(entry_params, current_user)
     if entry.created?
-      flash[:notice] = 'New entry added'
-      redirect_to root_path
+      flash[:notice] = "New entry added"
     else
       flash[:alert] = entry.payload.errors.full_messages
-      redirect_to root_path
     end
+    redirect_to root_path
   end
 
   def show
@@ -27,7 +26,7 @@ before_action :authenticate_user!
   def update
     @entry = Entry.find_by(id: params[:id])
     if @entry.update(entry_params)
-      flash[:notice] = 'Entry updated'
+      flash[:notice] = "Entry updated"
       redirect_to @entry
     else
       flash[:alert] = @entry.errors.full_messages
@@ -38,7 +37,7 @@ before_action :authenticate_user!
   def destroy
     @entry = Entry.find_by(id: params[:id])
     @entry.destroy
-    flash[:notice] = 'Entry deleted'
+    flash[:notice] = "Entry deleted"
     redirect_to root_path
   end
 
@@ -48,4 +47,3 @@ before_action :authenticate_user!
     params.require(:entry).permit(:location, :note)
   end
 end
-  

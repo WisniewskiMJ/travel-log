@@ -14,15 +14,15 @@ class EntryCreator < ApplicationService
         if get_temperature.successfull?
           entry = get_temperature.payload
           entry.save
-          result = OpenStruct.new({ created?: true, payload: entry })
+          OpenStruct.new({created?: true, payload: entry})
         else
-          result = OpenStruct.new({ created?: false, payload: entry })
+          OpenStruct.new({created?: false, payload: entry})
         end
       else
-        result = OpenStruct.new({ created?: false, payload: entry })
+        OpenStruct.new({created?: false, payload: entry})
       end
     else
-      result = OpenStruct.new({ created?: false, payload: entry })
+      OpenStruct.new({created?: false, payload: entry})
     end
   end
 end

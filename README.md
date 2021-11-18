@@ -18,6 +18,7 @@ Live version: [Travel Log](https://travellerdiary.herokuapp.com/)
 * Bootstrap 5
 * PostgreSQL
 * RSpec
+* StandardRB
 
 ### Integrations
 * Gmail for Action Mailer

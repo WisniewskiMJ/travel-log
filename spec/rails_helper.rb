@@ -1,12 +1,12 @@
-require 'spec_helper'
-require 'vcr'
+require "spec_helper"
+require "vcr"
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
-ENV['RAILS_ENV'] ||= 'test'
-require File.expand_path('../config/environment', __dir__)
+ENV["RAILS_ENV"] ||= "test"
+require File.expand_path("../config/environment", __dir__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
-require 'rspec/rails'
+require "rspec/rails"
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -22,7 +22,7 @@ require 'rspec/rails'
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
 #
-Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
+Dir[Rails.root.join("spec", "support", "**", "*.rb")].sort.each { |f| require f }
 
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove these lines.
@@ -34,11 +34,11 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 
 VCR.configure do |c|
-  c.cassette_library_dir = 'spec/support/vcr_cassettes'
+  c.cassette_library_dir = "spec/support/vcr_cassettes"
   c.hook_into :webmock
   c.configure_rspec_metadata!
   c.ignore_localhost = true
-  c.filter_sensitive_data('<owm_api_key>') { ENV['OPEN_WEATHER_MAP_API_KEY'] }
+  c.filter_sensitive_data("<owm_api_key>") { ENV["OPEN_WEATHER_MAP_API_KEY"] }
 end
 
 RSpec.configure do |config|

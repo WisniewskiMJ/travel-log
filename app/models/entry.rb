@@ -3,5 +3,4 @@ class Entry < ApplicationRecord
   validates :location, :note, :user_id, presence: true
 
   belongs_to :user
-
 end
