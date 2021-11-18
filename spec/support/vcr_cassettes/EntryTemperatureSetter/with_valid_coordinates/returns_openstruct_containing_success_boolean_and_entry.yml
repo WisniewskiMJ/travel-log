@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/weather?appid=<owm_api_key>&lat=52.759577&lon=21.5929004&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Thu, 18 Nov 2021 18:01:06 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '489'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?lat=52.76&lon=21.59&units=metric"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjb29yZCI6eyJsb24iOjIxLjU5MjksImxhdCI6NTIuNzU5Nn0sIndlYXRoZXIiOlt7ImlkIjo4MDQsIm1haW4iOiJDbG91ZHMiLCJkZXNjcmlwdGlvbiI6Im92ZXJjYXN0IGNsb3VkcyIsImljb24iOiIwNG4ifV0sImJhc2UiOiJzdGF0aW9ucyIsIm1haW4iOnsidGVtcCI6Ny4xOCwiZmVlbHNfbGlrZSI6NS4zNSwidGVtcF9taW4iOjcuMTIsInRlbXBfbWF4Ijo4Ljg2LCJwcmVzc3VyZSI6MTAxNCwiaHVtaWRpdHkiOjg1fSwidmlzaWJpbGl0eSI6MTAwMDAsIndpbmQiOnsic3BlZWQiOjIuNjgsImRlZyI6MjIwLCJndXN0IjozLjU4fSwiY2xvdWRzIjp7ImFsbCI6MTAwfSwiZHQiOjE2MzcyNTg0NjYsInN5cyI6eyJ0eXBlIjoyLCJpZCI6MjAzMzA3MSwiY291bnRyeSI6IlBMIiwic3VucmlzZSI6MTYzNzIxNTMxMywic3Vuc2V0IjoxNjM3MjQ2MTYxfSwidGltZXpvbmUiOjM2MDAsImlkIjo3NzMyMTcsIm5hbWUiOiJExYJ1Z29zaW9kxYJvIiwiY29kIjoyMDB9
+  recorded_at: Thu, 18 Nov 2021 18:01:06 GMT
+recorded_with: VCR 6.0.0

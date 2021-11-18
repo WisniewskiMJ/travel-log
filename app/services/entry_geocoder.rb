@@ -1,4 +1,4 @@
-class LocationGeocoder < ApplicationService
+class EntryGeocoder < ApplicationService
   def initialize(entry)
     @entry = entry
   end

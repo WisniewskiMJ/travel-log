@@ -7,10 +7,10 @@ class EntryCreator < ApplicationService
   def call
     entry = @user.entries.build(@params)
     if entry.valid?
-      geocode = LocationGeocoder.call(entry)
+      geocode = EntryGeocoder.call(entry)
       if geocode.successfull?
         entry = geocode.payload
-        get_temperature = WeatherGetter.call(entry)
+        get_temperature = EntryTemperatureSetter.call(entry)
         if get_temperature.successfull?
           entry = get_temperature.payload
           entry.save

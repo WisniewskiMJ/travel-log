@@ -1,4 +1,4 @@
-class WeatherGetter < ApplicationService
+class EntryTemperatureSetter < ApplicationService
   def initialize(entry)
     @entry = entry
   end
