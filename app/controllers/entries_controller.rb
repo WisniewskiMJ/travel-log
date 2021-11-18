@@ -17,26 +17,29 @@ before_action :authenticate_user!
   end
 
   def show
-    @entry = Entry.find(params[:id])
+    @entry = Entry.find_by(id: params[:id])
   end
 
   def edit
-    @entry = Entry.find(params[:id])
+    @entry = Entry.find_by(id: params[:id])
   end
 
   def update
-    @entry = Entry.find(params[:id])
+    @entry = Entry.find_by(id: params[:id])
     if @entry.update(entry_params)
+      flash[:notice] = 'Entry updated'
       redirect_to @entry
     else
+      flash[:alert] = @entry.errors.full_messages
       render :edit
     end
   end
 
   def destroy
-    @entry = Entry.find(params[:id])
+    @entry = Entry.find_by(id: params[:id])
     @entry.destroy
-    redirect_to entries_path
+    flash[:notice] = 'Entry deleted'
+    redirect_to root_path
   end
 
   private

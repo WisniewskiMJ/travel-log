@@ -59,6 +59,8 @@ end
 
 group :test do
   gem 'shoulda-matchers', '~> 5.0'
+  gem 'vcr', '~> 6.0'
+  gem 'webmock', '~> 3.14'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

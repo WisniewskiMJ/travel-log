@@ -1,7 +1,5 @@
 class PagesController < ApplicationController
   def welcome
-  if user_signed_in?
-    redirect_to entries_url
+    redirect_to entries_url if user_signed_in?
   end
-end
 end

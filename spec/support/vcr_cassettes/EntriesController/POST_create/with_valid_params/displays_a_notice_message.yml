@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/search?accept-language=en&addressdetails=1&format=json&q=Dyszobaba
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 18 Nov 2021 13:02:55 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=20
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sicGxhY2VfaWQiOjI4MzYxNzg1NiwibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwczovL29zbS5vcmcvY29weXJpZ2h0Iiwib3NtX3R5cGUiOiJyZWxhdGlvbiIsIm9zbV9pZCI6MTI3MDI5NzAsImJvdW5kaW5nYm94IjpbIjUyLjg5ODUwNjkiLCI1Mi45MjA5MDgiLCIyMS4zODE0NDc3IiwiMjEuNDEyODQ5NyJdLCJsYXQiOiI1Mi45MTIwNDI3IiwibG9uIjoiMjEuMzk4MjU1IiwiZGlzcGxheV9uYW1lIjoiRHlzem9iYWJhLCBnbWluYSBSw7PFvGFuLCBNYWvDs3cgQ291bnR5LCBNYXNvdmlhbiBWb2l2b2Rlc2hpcCwgUG9sYW5kIiwiY2xhc3MiOiJib3VuZGFyeSIsInR5cGUiOiJhZG1pbmlzdHJhdGl2ZSIsImltcG9ydGFuY2UiOjAuMzY3Mjc3NTAzMzUzNjIyMywiaWNvbiI6Imh0dHBzOi8vbm9taW5hdGltLm9wZW5zdHJlZXRtYXAub3JnL3VpL21hcGljb25zLy9wb2lfYm91bmRhcnlfYWRtaW5pc3RyYXRpdmUucC4yMC5wbmciLCJhZGRyZXNzIjp7InZpbGxhZ2UiOiJEeXN6b2JhYmEiLCJtdW5pY2lwYWxpdHkiOiJnbWluYSBSw7PFvGFuIiwiY291bnR5IjoiTWFrw7N3IENvdW50eSIsInN0YXRlIjoiTWFzb3ZpYW4gVm9pdm9kZXNoaXAiLCJjb3VudHJ5IjoiUG9sYW5kIiwiY291bnRyeV9jb2RlIjoicGwifX1d
+  recorded_at: Thu, 18 Nov 2021 13:02:55 GMT
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/weather?appid=9f88fe18babada596c653be925ddbfe8&lat=52.9120427&lon=21.398255&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Thu, 18 Nov 2021 13:02:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '515'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?lat=52.91&lon=21.4&units=metric"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjb29yZCI6eyJsb24iOjIxLjM5ODMsImxhdCI6NTIuOTEyfSwid2VhdGhlciI6W3siaWQiOjgwNCwibWFpbiI6IkNsb3VkcyIsImRlc2NyaXB0aW9uIjoib3ZlcmNhc3QgY2xvdWRzIiwiaWNvbiI6IjA0ZCJ9XSwiYmFzZSI6InN0YXRpb25zIiwibWFpbiI6eyJ0ZW1wIjo4LjMsImZlZWxzX2xpa2UiOjQuNDcsInRlbXBfbWluIjo4LjE2LCJ0ZW1wX21heCI6OC44LCJwcmVzc3VyZSI6MTAxOSwiaHVtaWRpdHkiOjY1LCJzZWFfbGV2ZWwiOjEwMTksImdybmRfbGV2ZWwiOjEwMDh9LCJ2aXNpYmlsaXR5IjoxMDAwMCwid2luZCI6eyJzcGVlZCI6Ny45NiwiZGVnIjoyNzQsImd1c3QiOjExLjgyfSwiY2xvdWRzIjp7ImFsbCI6ODl9LCJkdCI6MTYzNzI0MDIwMywic3lzIjp7InR5cGUiOjIsImlkIjoyMDMzMDcxLCJjb3VudHJ5IjoiUEwiLCJzdW5yaXNlIjoxNjM3MjE1Mzk3LCJzdW5zZXQiOjE2MzcyNDYxNzB9LCJ0aW1lem9uZSI6MzYwMCwiaWQiOjc2MDI1NSwibmFtZSI6IlLDs8W8YW4iLCJjb2QiOjIwMH0=
+  recorded_at: Thu, 18 Nov 2021 13:02:55 GMT
+recorded_with: VCR 6.0.0
