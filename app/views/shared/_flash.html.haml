@@ -2,6 +2,6 @@
   %div{ class: "alert #{category == 'alert' ? 'alert-danger' : 'alert-success'}"}
     - if message.instance_of?(Array)
       - message.each do |m|
-        = m
+        %p #{m}
     - else
       = message
