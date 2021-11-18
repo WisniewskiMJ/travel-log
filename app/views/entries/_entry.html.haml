@@ -2,14 +2,17 @@
   .col-md-3.h-100.overflow-hidden
     .m-1
       = image_tag('/images/road.jpg', class: 'img-fluid img-cover py-0 rounded-3')
-  .col-md-9.px-3.py-1.h-100
-    .fs-3.text-dark.mb-3.d-flex.flex-row.justify-content-between
+  .col-md-9.px-3.py-1.min-h-100
+    .fs-3.text-dark.mb-3.d-flex.flex-row.justify-content-between.w-100
       #{entry.location}, #{entry.created_at.strftime("%d.%m.%y")}
       .d-flex.flex-column.align-items-end
         .fs-3.text-dark.lh-1
           #{entry.temperature} &degC
         .fs-6.text-black-50
           #{entry.latitude} #{entry.longitude}
-    .fs-5.h-75.overflow-hidden.pb-4
-      = entry.note[0..250]
+    .fs-5.min-h-50.overflow-hidden.pb-4.mb-2
+      = entry.note[0..200]
+    .d-flex.flex-row.justify-content-end
+      = link_to "Edit", edit_entry_path(entry), class: 'btn btn-secondary btn-sm me-2 mb-4'
+      = link_to "Delete", entry_path(entry), method: :delete, class: 'btn btn-secondary btn-sm ms-2 mb-4'
       

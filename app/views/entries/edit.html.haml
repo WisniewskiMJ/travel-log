@@ -1,0 +1,10 @@
+.shadow.p-3.rounded-3.mt-4
+  .mb-2.fs-1
+    Edit entry
+  = form_for(:entry, url: entry_path(@entry), method: :patch ) do |f|
+    .form-group.mb-3
+      = f.text_field :location, placeholder: 'Location name', class: 'form-control'
+    .form-group.mb-3
+      = f.text_area :note, placeholder: 'Note', class: 'form-control input-field'
+    .form-group
+      = f.submit 'edit', class: 'btn btn-secondary'
