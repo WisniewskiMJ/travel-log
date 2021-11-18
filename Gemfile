@@ -36,6 +36,7 @@ gem "httparty", "~> 0.20.0"
 gem "geocoder", "~> 1.7"
 gem "factory_bot_rails", "~> 6.2"
 gem "faker", "~> 2.19"
+gem 'cloudinary', '~> 1.21'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

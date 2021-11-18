@@ -44,6 +44,6 @@ class EntriesController < ApplicationController
   private
 
   def entry_params
-    params.require(:entry).permit(:location, :note)
+    params.require(:entry).permit(:location, :note, :photo)
   end
 end

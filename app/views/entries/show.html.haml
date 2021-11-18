@@ -1,6 +1,9 @@
 .shadow.p-3.rounded-3.mt-4.mb-4
   .vh-40.overflow-hidden
-    = image_tag('/images/road.jpg', class: 'img-fluid img-cover py-0 rounded-3')
+    - if @entry.photo.attached?
+      = image_tag(@entry.photo, class: 'img-fluid img-cover py-0 rounded-3')
+    - else
+      = image_tag('/images/road.jpg', class: 'img-fluid img-cover py-0 rounded-3')
   .min-vh-40
     .fs-3.text-dark.mb-3.d-flex.flex-row.justify-content-between.w-100.mt-3
       #{@entry.location}, #{@entry.created_at.strftime("%d.%m.%y")}

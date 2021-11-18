@@ -1,7 +1,10 @@
 .row.g-0.rounded-3.shadow.mb-5.mx-3
   .col-md-3.h-100.overflow-hidden
     .m-1
-      = image_tag('/images/road.jpg', class: 'img-fluid img-cover py-0 rounded-3')
+      - if entry.photo.attached?
+        = image_tag(entry.photo, class: 'img-fluid img-cover py-0 rounded-3')
+      - else
+        = image_tag('/images/road.jpg', class: 'img-fluid img-cover py-0 rounded-3')
   .col-md-9.px-3.py-1.min-h-100
     .fs-3.text-dark.mb-3.d-flex.flex-row.justify-content-between.w-100
       #{entry.location}, #{entry.created_at.strftime("%d.%m.%y")}
