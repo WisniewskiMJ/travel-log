@@ -1,24 +1,46 @@
-# README
+# TRAVEL LOG
+Travel Log is personal travel diary. You can add place location and a note, and the app will add current date, your geographic coordinates and the temperature at that location.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Live version: [Travel Log](https://travellerdiary.herokuapp.com/)
 
-Things you may want to cover:
+### Features:
+- setting up account with email autentication
+- signing in with Google account
+- adding place location and note
+- showing geographical coordinates and temperature at the location
+- editing location name and note
+- deleting entry
 
-* Ruby version
+### Technologies used:
+* Ruby 3.0.2
+* Rails 6.1.4
+* Haml
+* Bootstrap 5
+* PostgreSQL
+* RSpec
 
-* System dependencies
+### Integrations
+* Gmail for Action Mailer
+* Google Sign-In
+* Geocoder with Nominatim API
+* OpenWeatherMap API
 
-* Configuration
+### Setup
 
-* Database creation
+To run locally, you have to have Ruby in version 3.0.2 installed on your machine.
+Next you have to execute 
+```
+.bin/setup
+```
+which will install bundler and create database. 
+Then you have to run 
+```
+bundle exec rails server
+```
+and the app will be available at __localhost:3000__ in your browser.
 
-* Database initialization
+### To do
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Setup ActiveStorage
+* Add service for editing entries
+* Add end to end tests
